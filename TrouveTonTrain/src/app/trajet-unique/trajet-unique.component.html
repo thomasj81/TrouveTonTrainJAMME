@@ -1,0 +1,60 @@
+<br>
+<table>
+	<tr>
+		<th>
+			Gare Départ
+		</th>
+		<th>
+			Date/Heure Départ
+		</th>
+		<th>
+			<i class="material-icons">arrow_right_alt</i>
+		</th>
+		<th>
+			Gare Arrivée
+		</th>
+		<th>
+			Date/Heure Arrivée
+		</th>
+		<th>
+			Temps de trajet
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<div  *ngFor="let j of trajetListe; let i = index" [attr.data-index]="i">
+				{{ j.source.name }}
+			</div>
+		</td>
+		<td>
+			<div  *ngFor="let j of trajetListe; let i = index" [attr.data-index]="i">
+				{{ j.departDate.date }}
+				<br>
+				<i class="material-icons">      access_time    </i>
+				    {{ j.departDate.temps }}
+			</div>
+		</td>
+		<td>
+			<i class="material-icons">arrow_right_alt</i>
+		</td>
+		<td>
+			<div  *ngFor="let j of trajetListe; let i = index" [attr.data-index]="i">
+				{{ j.destination.name  }}
+			</div>
+		</td>
+		<td>
+			<div  *ngFor="let j of trajetListe; let i = index" [attr.data-index]="i">
+				{{ j.arriveeDate.date }}
+				<br>
+				<i class="material-icons">      access_time    </i>
+				{{ j.arriveeDate.temps }}
+			</div>
+		</td>
+		<td>
+			<div  *ngFor="let j of trajetListe; let i = index" [attr.data-index]="i">
+				{{ j.duree }}
+			</div>
+		</td>
+	</tr>
+</table>
+<br>

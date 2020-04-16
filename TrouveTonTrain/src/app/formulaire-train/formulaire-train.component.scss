@@ -1,0 +1,51 @@
+
+.form-inline
+{
+	width: 100%;
+}
+
+.contain
+{
+	align-items: center;
+	justify-content: space-evenly;
+	width: 80%;
+	margin: auto;
+	font-size: 27px;
+	font-weight: bold;
+}
+
+.resume-container
+{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+	border-top: 3px solid blue;
+	border-right: 3px solid blue;
+	border-left: 3px solid blue;
+	border-bottom: 3px solid blue;
+	background-color: black;
+	padding: 5px 0;
+	font-size: 27px;
+}
+
+.test
+{
+	text-align: right;
+	float:right;
+}
+
+.distance
+{
+	color : blue;
+	font-weight: bold;
+}
+
+.projet{
+  font-style: italic;
+  font-size: 15px;
+  text-align: right;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight:normal
+
+}

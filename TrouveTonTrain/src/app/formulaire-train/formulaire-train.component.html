@@ -1,0 +1,94 @@
+
+ 
+
+<form  [formGroup]="formGroup" autocomplete="off" (ngSubmit)="onSubmit()">
+	<div class="contain">
+		<!-- 
+		<pre>
+			              &thinsp;        
+		</pre>
+     -->
+     <div class="projet">Créé dans le cadre d'un projet Universitaire, JAMME</div>
+		<br>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<mat-form-field>
+						<mat-label>
+							Départ
+						</mat-label>
+						<input type="text" (input)="getOptions($event.target.value, 1)"                         matInput formControlName="from" [matAutocomplete]="from">
+					</mat-form-field>
+					<mat-autocomplete #from="matAutocomplete">
+						<mat-option *ngFor="let option of optionsSource" [value]="option">
+							{{option}}
+						</mat-option>
+					</mat-autocomplete>
+					                ►              
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					                ►
+					<mat-form-field>
+						<mat-label>
+							Destination
+						</mat-label>
+						<input type="text" (input)="getOptions($event.target.value, 2)"                         matInput formControlName="to" [matAutocomplete]="to">
+					</mat-form-field>
+					<mat-autocomplete #to="matAutocomplete">
+						<mat-option *ngFor="let option of optionsDestination" [value]="option">
+							{{option}}
+						</mat-option>
+					</mat-autocomplete>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="form-group">
+					<mat-form-field>
+						<mat-label>
+							Date
+						</mat-label>
+						<input matInput formControlName="date" [matDatepicker]="picker">
+						<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+						<mat-datepicker #picker></mat-datepicker>
+					</mat-form-field>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="form-group">
+					<ngb-timepicker  formControlName="temps" name="time"></ngb-timepicker>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="form-group">
+					<br>
+					<button style="height: 45px; background-color: blue;"  class="btn btn-primary" type="submit" [disabled]="formGroup.invalid">Rechercher</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+</form>
+<div *ngIf="placeSource" class="resume-container">
+	<div *ngIf="placeSource">
+		{{ placeSource.name }}
+	</div>
+	<i class="material-icons"><div class="distance"> arrow_right_alt</div></i>
+	<div *ngIf="placeDestination">
+		{{ placeDestination.name }}
+	</div>
+	      Distance :
+	<div class="distance">
+		{{ distance }}km
+	</div>
+
+</div>
+<app-trajet-unique    *ngFor="let trajets of trajet"  
+  [trajet]="trajets"    
+  [distance]="distance"  
+  [choixDate]="choixDate">
+  </app-trajet-unique>
