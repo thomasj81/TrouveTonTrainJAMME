@@ -25,3 +25,30 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+Commande réalise sur mon projet
+
+npm install --save @angular/material
+npm install --save @angular/cdk
+ng add @angular/material
+npm install --save @ng-bootstrap/ng-bootstrap
+npm install bootstrap@3.3.7
+npm install @angular/localize --save
+ng add @angular/localize
+npm install
+
+dans package jason remplacer la version :
+
+@ng-bootstrap/ng-bootstrap": "^5.3.0",
+
+puis npm install
+
+<----------------------------------------->
+
+
+git clone https://github.com/thomasj81/TrouveTonTrainJAMME.git
+
+npm install 
+
+ng serve

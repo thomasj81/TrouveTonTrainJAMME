@@ -2,8 +2,9 @@
   "name": "trouve-ton-train-jammefinal",
   "version": "0.0.0",
   "scripts": {
+    "postinstall": "ng build --aot -prod",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -13,8 +14,10 @@
   "dependencies": {
     "@angular/animations": "~8.2.11",
     "@angular/cdk": "~8.2.3",
+    "@angular/cli": "~8.3.13",
     "@angular/common": "~8.2.11",
     "@angular/compiler": "~8.2.11",
+    "@angular/compiler-cli": "~8.2.11",
     "@angular/core": "~8.2.11",
     "@angular/forms": "~8.2.11",
     "@angular/localize": "^9.1.1",
@@ -24,9 +27,12 @@
     "@angular/router": "~8.2.11",
     "@ng-bootstrap/ng-bootstrap": "^5.3.0",
     "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
     "hammerjs": "^2.0.8",
+    "path": "^0.12.7",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
+    "typescript": "~3.5.3",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
@@ -49,5 +55,9 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
+  },
+  "engines": {
+    "node": "6.11.0",
+    "npm": "3.10.10"
   }
 }
