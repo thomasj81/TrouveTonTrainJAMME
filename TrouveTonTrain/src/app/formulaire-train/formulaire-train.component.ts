@@ -28,7 +28,6 @@ export class FormulaireTrainComponent implements OnInit {
     this.trajetAbonne = this.sncfService.trajetAbonneSub.subscribe(
       (data: any) => {
         this.trajet = data;
-        //console.log(this.trajet);
       }
     );
   }
@@ -81,7 +80,7 @@ export class FormulaireTrainComponent implements OnInit {
     const lon1 = parseFloat(this.placeSource.long);
     let lat2 = parseFloat(this.placeDestination.lat);
     const lon2 = parseFloat(this.placeDestination.long);
-    const R = 6371; // km
+    const R = 6371; // en km
     const dLat = this.EnDegres(lat2 - lat1);
     const dLon = this.EnDegres(lon2 - lon1);
     lat1 = this.EnDegres(lat1);

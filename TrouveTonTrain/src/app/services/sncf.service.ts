@@ -6,7 +6,7 @@ import {map} from 'rxjs/operators';
 
 @Injectable()
 export class SncfService {
-  private sncfToken = '08ac4f0f-5729-40a6-a61e-656374c1f228';
+  private sncfToken = '08ac4f0f-5729-40a6-a61e-656374c1f228'; // Clé obtenu sur l'api SNCF
   private trajet: any;
   trajetAbonneSub = new Subject<any>();
   constructor(private httpClient: HttpClient) {}
